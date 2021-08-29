@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border - box;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            background: #34495e;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            height: 200px;
+            width: 200px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: 600;
+            perspective: 4000px;
+            transform-style: preserve-3d;
+            transform: translateZ(100px);
+            transition: 0.5s;
+        }
+        
+        .face1,
+        .face2 {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            line-height: 200px;
+        }
+        
+        .face2 {
+            background-color: aqua;
+            transform: rotateX(-90deg);
+            transform-origin: top;
+        }
+        
+        .face1 {
+            background-color: brown;
+        }
+        
+        .container:hover {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="face1">face1</div>
+        <div class="face2">face2</div>
+    </div>
+</body>
+
+</html>

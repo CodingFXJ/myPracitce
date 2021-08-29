@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwingBall</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(43, 40, 53);
+        }
+        
+        .columnbox {
+            height: 400px;
+            width: 300px;
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+        }
+        
+        .column {
+            height: 100%;
+            width: 20px;
+            border-radius: 10px;
+        }
+        
+        .circle {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            top: -30%;
+            left: -20%;
+            background-color: rgb(43, 40, 53);
+            border-radius: 50%;
+            transform: rotate(45deg);
+            animation: swing 2s ease-in-out infinite alternate-reverse;
+        }
+        
+        .circle .ball {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(143, 138, 118);
+        }
+        
+        .column:nth-child(1) {
+            background-color: rgb(148, 81, 211);
+        }
+        
+        .column:nth-child(2) {
+            background-color: rgb(231, 235, 33);
+        }
+        
+        .column:nth-child(3) {
+            background-color: rgb(238, 106, 73);
+        }
+        
+        .column:nth-child(4) {
+            background-color: rgb(45, 235, 130);
+        }
+        
+        .column:nth-child(5) {
+            background-color: rgb(76, 166, 226);
+        }
+        
+        .column:nth-child(6) {
+            background-color: rgb(231, 82, 245);
+        }
+        
+        .column:nth-child(7) {
+            background-color: rgb(116, 87, 245);
+        }
+        
+        .column:nth-child(8) {
+            background-color: rgb(245, 69, 84);
+        }
+        
+        @keyframes swing {
+            0% {
+                transform: rotate(45deg);
+            }
+            100% {
+                transform: rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="columnbox">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="circle">
+            <div class="ball"></div>
+        </div>
+    </div>
+</body>
+
+</html>

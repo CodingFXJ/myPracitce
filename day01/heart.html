@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心跳</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .heart {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            background: rgb(230, 36, 36);
+            transform: rotate(45deg);
+            animation: heartdance 2s ease-in-out infinite;
+        }
+        
+        .heart::before,
+        .heart::after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background: rgb(230, 36, 36);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .heart::before {
+            transform: translate(-50%, 0)
+        }
+        
+        .heart::after {
+            transform: translate(0, -50%)
+        }
+        
+        @keyframes heartdance {
+            50% {
+                transform: rotate(45deg) scale(1.3);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart">
+
+    </div>
+</body>
+
+</html>

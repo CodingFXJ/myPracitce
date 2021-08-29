@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(54, 59, 66);
+        }
+        
+        .card {
+            height: 400px;
+            width: 320px;
+            position: relative;
+            background-color: turquoise !important;
+        }
+        
+        .card::before,
+        .card::after {
+            position: absolute;
+            content: '';
+            left: 2px;
+            top: 2px;
+            bottom: 2px;
+            right: 2px;
+            /* z-index: -1; */
+            /* background-color: red; */
+            /* background-color: linear-gradient(to top right, #b92b27, #304d4d, #1565c0); */
+            background-color: #fff;
+        }
+        
+        .card {
+            filter: blur(100px)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card"></div>
+</body>
+
+</html>

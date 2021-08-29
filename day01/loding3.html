@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            padding: 50px;
+            justify-content: space-around;
+            background-color: rgb(27, 29, 53);
+        }
+        
+        .loding1 {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: rotate 1s linear infinite;
+        }
+        
+        .loding1>span {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+        
+        .loding1>span:nth-child(1) {
+            background-color: rgb(250, 199, 132);
+        }
+        
+        .loding1>span:nth-child(2) {
+            background-color: rgb(68, 208, 218);
+        }
+        
+        .loding1>span:nth-child(3) {
+            background-color: rgb(213, 89, 230);
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        /* loding2 */
+        
+        .loding2 {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: rotate 1s linear infinite;
+        }
+        
+        .loding2>span {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+        
+        .loding2>span:nth-child(1) {
+            background-color: rgb(250, 199, 132);
+            align-self: flex-start;
+        }
+        
+        .loding2>span:nth-child(2) {
+            background-color: rgb(68, 208, 218);
+            align-self: flex-end;
+        }
+        /* loding3 */
+        
+        .loding3 {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: rotate3 1s linear infinite;
+        }
+        
+        .loding3>span {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+        
+        .loding3>span:nth-child(1) {
+            background-color: rgb(250, 199, 132);
+            align-self: flex-start;
+        }
+        
+        .loding3>span:nth-child(2) {
+            background-color: rgb(68, 208, 218);
+            align-self: flex-end;
+        }
+        
+        @keyframes rotate3 {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(0.1);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+        /* loding4 */
+        
+        .loding4 {
+            width: 30px;
+            height: 30px;
+            animation: rotate3 1s linear infinite;
+        }
+        
+        .loding4>div {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+        
+        .loding4>div:nth-child(1) {
+            background-color: rgb(250, 199, 132);
+            animation: scale4 1s ease-in-out infinite alternate;
+        }
+        
+        .loding4>div:nth-child(2) {
+            background-color: rgb(68, 208, 218);
+            animation: scale4 1s ease-in-out .5s infinite alternate;
+        }
+        
+        @keyframes rotate4 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes scale4 {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+        /* loding5 */
+        
+        .loding5 {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: rotate5 1s linear infinite;
+        }
+        
+        .loding5>span {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+        
+        .loding5>span:nth-child(1) {
+            background-color: rgb(250, 199, 132);
+            align-self: flex-start;
+            transform: scale(.5);
+            animation: animloader52 2s ease-in-out 1s infinite;
+        }
+        
+        .loding5>span:nth-child(2) {
+            background-color: rgb(68, 208, 218);
+            align-self: flex-end;
+            transform: scale(.5) translate(100%, 100%);
+            animation: animloader5 2s ease-in-out infinite;
+        }
+        
+        @keyframes rotate5 {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        
+        @keyframes animloader5 {
+            50% {
+                transform: scale(1) translate(-30%, -30%)
+            }
+        }
+        
+        @keyframes animloader52 {
+            50% {
+                transform: scale(1) translate(30%, 30%)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loding1">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="loding2">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="loding3">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="loding4">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="loding5">
+        <span></span>
+        <span></span>
+    </div>
+</body>
+
+</html>
