@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border - box;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        
+        .container>section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+        
+        .one {
+            background-color: aqua;
+        }
+        
+        .two {
+            background-color: rgb(49, 230, 145);
+        }
+        
+        .three {
+            background-color: rgb(238, 73, 210);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="one">第1页</section>
+        <section class="two">第2页</section>
+        <section class="three">第3页</section>
+    </div>
+</body>
+
+</html>
